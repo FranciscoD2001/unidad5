@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\UserController;
 
@@ -47,3 +48,7 @@ Route::get('suma/{num1}/{num2}/{num3?}', function($num1,$num2,$num3=0){
 Route::post('suma', function(Request $request){
 
 });
+
+Route::get('clients/', [ClientController::class, 'index']);
+
+Route::get('clients/{id}', [ClientController::class, 'show']);
