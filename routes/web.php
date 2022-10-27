@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\UserController;
 
@@ -52,3 +53,8 @@ Route::post('suma', function(Request $request){
 Route::get('clients/', [ClientController::class, 'index']);
 
 Route::get('clients/{id}', [ClientController::class, 'show']);
+
+
+Route::get('reservations/', [ReservationController::class, 'index']);
+
+Route::get('reservations/{id}', [ReservationController::class, 'show']);
