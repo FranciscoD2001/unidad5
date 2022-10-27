@@ -17,7 +17,7 @@ class ReservationSeeder extends Seeder
     {
         $reservation = new Reservation();
         $reservation->folio = "123";
-        $reservation->name_client = "Francisco";
+        $reservation->client_id = 1;
         $reservation->amount = "5000";
         $reservation->arrival_date = "2022-10-26";
         $reservation->departure_date = "2022-10-30";
@@ -25,7 +25,7 @@ class ReservationSeeder extends Seeder
 
         $reservation = new Reservation();
         $reservation->folio = "1234";
-        $reservation->name_client = "Angel";
+        $reservation->client_id = 2;
         $reservation->amount = "5000";
         $reservation->arrival_date = "2022-10-26";
         $reservation->departure_date = "2022-10-30";

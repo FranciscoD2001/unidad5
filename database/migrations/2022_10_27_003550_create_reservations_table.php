@@ -17,10 +17,17 @@ return new class extends Migration
             $table->id();
 
             $table->string('folio')->unique();
-            $table->string('name_client');
+            // $table->string('name_client');
+
+            $table->unsignedBigInteger('client_id');
+            $table->foreign('client_id')->references('id')->on('clients');
+
             $table->string('amount');
             $table->date('arrival_date');
             $table->date('departure_date');
+
+            // $table->unsignedBigInteger('client_id');
+            // $table->foreign('client_id')->references('id')->on('clients');
 
             $table->timestamps();
         });

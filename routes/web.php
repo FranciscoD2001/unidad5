@@ -50,6 +50,7 @@ Route::post('suma', function(Request $request){
 
 });
 
+
 Route::get('clients/', [ClientController::class, 'index']);
 
 Route::get('clients/{id}', [ClientController::class, 'show']);

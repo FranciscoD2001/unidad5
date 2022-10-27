@@ -18,11 +18,12 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call([
-            ClientSeeder::class
-        ]);
-        $this->call([
+            ClientSeeder::class,
             ReservationSeeder::class
         ]);
+        // $this->call([
+        //     ReservationSeeder::class
+        // ]);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
