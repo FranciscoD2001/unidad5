@@ -19,10 +19,13 @@
                 Name
             </td>
             <td>
-                Emai
+                Email
             </td>
             <td>
                 Phone number
+            </td>
+            <td>
+                Actions
             </td>
         </thead>
         <tbody>
@@ -39,6 +42,11 @@
                     </td>
                     <td>
                         {{ $client -> phone_number }}
+                    </td>
+                    <td>
+                        <a href="{{ url(('/clients/edit/'.$client->id)) }}">
+                            Editar
+                        </a>
                     </td>
                 </tr>
             @endforeach

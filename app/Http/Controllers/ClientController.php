@@ -70,9 +70,11 @@ class ClientController extends Controller
      * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function edit(Client $client)
+    public function edit(Client $id)
     {
-        //
+        $client = Client::with('reservations')->find($id);
+        // return $client;
+        return view('clients.update_client', compact('client'));
     }
 
     /**
@@ -82,9 +84,11 @@ class ClientController extends Controller
      * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Client $client)
+    public function update(Request $request)
     {
-        //
+        $client = Client::find($request->id);
+        $client -> update($request->all());
+        return $client;
     }
 
     /**
