@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             ClientSeeder::class,
-            ReservationSeeder::class
+            ReservationSeeder::class,
+            UserSeeder::class,
         ]);
         // $this->call([
         //     ReservationSeeder::class
